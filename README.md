@@ -1,4 +1,5 @@
 # GitHub repository for 'XEdgeConv: Leveraging graph convolutions for efficient, permutation-and rotation-invariant dense 3D medical image segmentation'
+![image](https://github.com/multimodallearning/XEdgeConv/assets/13519345/57918aae-ea61-4ebc-9dbf-f5a8a3ff628f)
 
 # Installation
 ```pip install nnunetv2```
