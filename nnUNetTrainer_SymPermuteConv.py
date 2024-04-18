@@ -108,6 +108,6 @@ class nnUNetTrainer_SymPermuteConv(nnUNetTrainer):
                         align_corners=False
                     )
                 )
-            set_module(network, name, upscale_conv)
+                set_module(network, name, upscale_conv)
 
         return network

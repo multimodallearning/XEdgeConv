@@ -13,3 +13,5 @@ For further info on how to use the nnunet framework, refer to: https://github.co
 
 # Citation
 Weihsbach, C., Hansen, L., & Heinrich, M. (2022, November). XEdgeConv: Leveraging graph convolutions for efficient, permutation-and rotation-invariant dense 3D medical image segmentation. In Geometric Deep Learning in Medical Image Analysis (pp. 61-71). PMLR.
+
+https://proceedings.mlr.press/v194/weihsbach22a.html
