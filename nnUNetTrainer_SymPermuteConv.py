@@ -89,24 +89,25 @@ class nnUNetTrainer_SymPermuteConv(nnUNetTrainer):
                         module.in_channels,
                         module.out_channels,
                         module.kernel_size,
-                        stride=module.stride
+                        stride=module.stride,
+                        padding=module.padding,
                     )
                     set_module(network, name, symconv)
 
-            # if isinstance(module, torch.nn.ConvTranspose3d):
-            #     upscale_conv = torch.nn.Sequential(
-            #         torch.nn.Conv3d(
-            #             module.in_channels,
-            #             module.out_channels,
-            #             1,
-            #             bias=False
-            #         ),
-            #         torch.nn.Upsample(
-            #             scale_factor=module.kernel_size,
-            #             mode='trilinear',
-            #             align_corners=False
-            #         )
-            #     )
-            # set_module(network, name, upscale_conv)
+            if isinstance(module, torch.nn.ConvTranspose3d):
+                upscale_conv = torch.nn.Sequential(
+                    torch.nn.Conv3d(
+                        module.in_channels,
+                        module.out_channels,
+                        1,
+                        bias=False
+                    ),
+                    torch.nn.Upsample(
+                        scale_factor=module.kernel_size,
+                        mode='trilinear',
+                        align_corners=False
+                    )
+                )
+            set_module(network, name, upscale_conv)
 
         return network
