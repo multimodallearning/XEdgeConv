@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "xedgeconv"
+version = "0.1.0"
+description = ""
+authors = ["Christian Weihsbach <christian.weihsbach@uni-luebeck.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+nnunetv2 = "^2.4.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
